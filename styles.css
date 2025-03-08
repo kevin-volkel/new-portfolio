@@ -23,7 +23,8 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 /* Style for headings */
@@ -78,13 +79,13 @@ header{
             border-radius: 50%;
         }
     }
-    .header-text {
-        display: flex;
-        flex-direction: column;
-        font-size: 50px;
+    .text-row {
+        /* display: flex;
+        flex-direction: column; */
+        font-size: 55px;
         margin-left: 10px;
         margin-bottom: 50px;
-        line-height: 65px;
+        line-height: 30px;
     }
 }
 
@@ -101,7 +102,7 @@ nav {
         li{
             a{
                 color: var(--text-color);
-                font-size: 35px;
+                font-size: 45px;
                 line-height: 65px;
                 text-decoration: none;
                 position: relative;
@@ -142,4 +143,44 @@ nav {
         }
         
     }
+}
+
+section{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    .section-header{
+        margin-left: 10px;
+        font-weight: 400;
+        font-size: 55px;
+    }
+
+    .green-slanted{
+        background: var(--primary-color);
+        height: 360px;
+        margin-top: 50px;
+        transform: translate(-30px) rotate(5.5deg);
+        width: 120%;
+        padding: 30px;
+
+    }
+
+    .subsection-header{
+        font-size: 40px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-left: 15px;
+    }
+
+    .subsection-text{
+        margin-left: 40px;
+        font-size: 24px;
+        width: 80%;
+    }
+}
+
+
+footer{
+    margin-top: 100px;
 }
