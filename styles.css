@@ -160,11 +160,14 @@ section{
         background: var(--primary-color);
     }
 
-    .slanted{
-        /* height: 360px; */
-        /* margin-top: 40px; */
-        /* transform: translate(-30px) rotate(5.5deg); */
-        /* width: 120%; */
+     /*.slanted{
+        height: 360px; 
+         margin-top: 40px; 
+         transform: translate(-30px) rotate(5.5deg); 
+         width: 120%; 
+         padding: 20px; } */
+
+    .life-category{
         padding: 20px;
     }
 
@@ -180,24 +183,35 @@ section{
         font-size: 24px;
         width: 80%;
 
+    }
+    #education .subsection-text{
         /* Education Styling */
-        .edu-category{
-            color: var(--accent-color);
+        .category{
+            font-weight: 500;
             font-size: 28px;
             line-height: 35px;
+            color: var(--accent-color);
 
-            .edu-year{
+            .year{
                 font-size: 24px;
             }
         }
-        ul.edu-list{
-            border-left: solid var(--text-color) 1px;
-            li.edu-list-item{
+        ul{
+            border-left: solid var(--accent-color) 2px;
+            margin-left: 6px;
+            li{
                 list-style-type: none;
-                padding-left: 20px;
+                padding-left: 16px;
             }
         }
     }
+}
+
+.primary-background{
+    background-color: var(--primary-color);
+}
+.secondary-background {
+    background-color: var(--secondary-color);
 }
 
 
