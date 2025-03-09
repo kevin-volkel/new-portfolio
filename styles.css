@@ -156,27 +156,46 @@ section{
         font-size: 55px;
     }
 
-    .green-slanted{
+    .green-background{
         background: var(--primary-color);
-        height: 360px;
-        margin-top: 50px;
-        transform: translate(-30px) rotate(5.5deg);
-        width: 120%;
-        padding: 30px;
+    }
 
+    .slanted{
+        /* height: 360px; */
+        /* margin-top: 40px; */
+        /* transform: translate(-30px) rotate(5.5deg); */
+        /* width: 120%; */
+        padding: 20px;
     }
 
     .subsection-header{
         font-size: 40px;
         text-transform: uppercase;
         letter-spacing: 3px;
-        margin-left: 15px;
+        margin-left: 5px;
     }
 
     .subsection-text{
-        margin-left: 40px;
+        margin-left: 20px;
         font-size: 24px;
         width: 80%;
+
+        /* Education Styling */
+        .edu-category{
+            color: var(--accent-color);
+            font-size: 28px;
+
+            .edu-year{
+                font-size: 24px;
+            }
+        }
+        ul.edu-list{
+            border-left: solid var(--text-color) 1px;
+            li.edu-list-item{
+                list-style-type: none;
+                padding-left: 20px;
+            }
+        }
     }
 }
 
