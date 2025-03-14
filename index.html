@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Moul&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -91,16 +92,43 @@
                 <div class="thumbnail">
                     <img src="img/error-face.svg" alt="Error Face">
                 </div>
-                <div class="title">Nothing Big Yet</div>
+                <div class="title">Nothing Big Yet...</div>
                 <div class="description">Please check back later. I have many planned projects, but little free time. Check out my GitHub for progress on any current projects, and for smaller projects I’ve worked on. </div>
                 <ul class="links">
-                    <li><a class="project-link">GitHub</a></li>
+                    <li><a class="project-link" href="https://github.com/kevin-volkel">GitHub</a></li>
                 </ul>
             </div>
         </section>
         <section id="my-contacts">
             <h2 class="section-header">These are my <span class="green-text">Contacts</span>.</h2>
-            <p>This is the My Contacts section.</p>
+            <form class="email-form" action="#" method="post">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name Here...">
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Here..." required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="10" placeholder="Your message here..." required></textarea>
+                </div>
+                
+                <button id="submit-btn" type="submit">Submit</button>
+            </form>
+
+            <div class="socials">
+                <a href="https://github.com/kevin-volkel" rel="noopener" target="_blank" title="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                  </a>
+                <a href="https://www.linkedin.com/in/kevin-volkel-6a761b203/" rel="noopener" target="_blank" title="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                  
+            </div>
         </section>
     </main>
     
