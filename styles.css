@@ -4,6 +4,9 @@
     --primary-color: #07390F;
     --secondary-color: #0C2710;
     --accent-color: #3BC452;
+
+    --active-accent-color: #2b8d3b;
+    --active-text-color: #b2b4bb;
 }
 
 
@@ -58,6 +61,10 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+ul {
+    list-style-type: none;
 }
 
 /* Header Styling */
@@ -171,7 +178,7 @@ section{
          width: 120%; 
          padding: 20px; } */
 
-    .life-category{
+    .category{
         padding: 20px;
     }
 
@@ -188,9 +195,9 @@ section{
         width: 80%;
 
     }
+    /* Education Styling */
     #education .subsection-text{
-        /* Education Styling */
-        .category{
+        .edu-category{
             font-weight: 500;
             font-size: 28px;
             line-height: 35px;
@@ -209,6 +216,39 @@ section{
             }
         }
     }
+
+    /* Skills Styling */
+    &#my-skills{
+        .subsection-text{
+            display: flex;
+            justify-content: center;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-left: -50px;
+                
+                li{
+                    font-weight: 300;
+                    font-size: 30px;
+                    -webkit-user-select: none;
+                    user-select: none;
+                    
+                    &.collapsed-language {
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        color: var(--active-text-color);
+                    }
+                    &.green-text:hover {
+                        color: var(--active-accent-color); /* Adjust the color to a darker shade of green */
+                    }
+                }
+            }
+        }
+    }
+    
 }
 #about-me{
     border-top: 3px solid black;
@@ -222,6 +262,13 @@ section{
 }
 .secondary-background {
     background-color: var(--secondary-color);
+}
+
+.primary-color{
+    color: rgb(116, 204, 120)
+}
+.grey-color{
+    color: rgb(43, 121, 20);
 }
 
 
