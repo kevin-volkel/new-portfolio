@@ -166,7 +166,7 @@ section{
     font-weight: 300;
     font-style: normal;
     .section-header{
-        margin-left: 10px;
+        margin: 50px 0 10px 10px;
         font-weight: 400;
         font-size: 55px;
         line-height: 3.5rem;
@@ -342,6 +342,13 @@ section{
                 color: var(--text-color);
             }
         }
+
+        .socials{
+            margin-top: 20px;
+            justify-self: center;
+            display: flex;
+            gap: 100px;
+        }
     }
 }
 #about-me{
@@ -367,7 +374,7 @@ section{
 
 
 footer{
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 /* Set social icons size and color */
