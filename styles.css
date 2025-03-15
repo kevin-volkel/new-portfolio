@@ -17,9 +17,9 @@
     box-sizing: border-box;
 }
 
-/* html{
+html{
     scroll-behavior: smooth;
-} */
+}
 
 /* Set a base font size and family for the entire document */
 body {
