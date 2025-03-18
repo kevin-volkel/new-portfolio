@@ -278,6 +278,7 @@ section{
 
             .title{
                 font-size: 30px;
+                text-align: center;
             }
 
             .description{
@@ -400,6 +401,7 @@ footer{
 }
   
 
+/* Tablet Styling */
 @media (min-width: 768px) {
     header{
         .header-row{
@@ -410,6 +412,29 @@ footer{
                     top: 25vh;
                     right: 5vw;
                 }
+            }
+        }
+    }
+
+    section#my-projects {
+        .project {
+            flex-direction: row;
+            padding: 10px;
+
+            .description {
+                flex: 1;
+                padding: 0 20px;
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .thumbnail-group {
+                flex: 0 0 auto;
+                margin-right: 20px;
+            }
+
+            .links{
+                font-size: 20px;
             }
         }
     }
