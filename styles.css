@@ -67,6 +67,25 @@ img {
     display: block;
 }
 
+/* Flattened header/profile styles so plain CSS applies in production and local file:// */
+header .header-row {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .header-row .logo {
+    font-family: "Moul", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+}
+
+header .header-row .profile img {
+    width: 75px;
+    border-radius: 50%;
+}
+
 ul {
     list-style-type: none;
 }
@@ -403,17 +422,12 @@ footer{
 
 /* Tablet Styling */
 @media (min-width: 768px) {
-    header{
-        .header-row{
-            .profile{
-                img{
-                    position: absolute;
-                    width: 40vw;
-                    top: 25vh;
-                    right: 5vw;
-                }
-            }
-        }
+    /* Desktop positioning for profile image */
+    header .header-row .profile img {
+        position: absolute;
+        width: 40vw;
+        top: 25vh;
+        right: 5vw;
     }
 
     section#my-projects {

@@ -20,18 +20,32 @@ const sendEmail = (formName, formEmail, formMessage) => {
     emailjs.send(serviceID, templateID, templateParams)
 }
 
-document.getElementById("submit-btn").addEventListener("click", (event) => {
-    event.preventDefault();
+// Attach to the form submit event so the form never reloads the page when JS is active
+const emailForm = document.querySelector('.email-form');
+if (emailForm) {
+    emailForm.addEventListener('submit', (event) => {
+        event.preventDefault();
 
-    const formName = document.getElementById("name").value;
-    const formEmail = document.getElementById("email").value;
-    const formMessage = document.getElementById("message").value;
+        const formName = document.getElementById("name").value.trim();
+        const formEmail = document.getElementById("email").value.trim();
+        const formMessage = document.getElementById("message").value.trim();
 
-    if (!formName || !formEmail || !formMessage) {
-        alert("Please fill out all fields before submitting.");
-        return;
-    }
+        if (!formName || !formEmail || !formMessage) {
+            alert("Please fill out all fields before submitting.");
+            return;
+        }
 
-    sendEmail(formName, formEmail, formMessage);
-    alert("Your message has been sent successfully!");
-});
+        // If emailjs is not loaded (e.g., blocked on deployed site), fail gracefully
+        if (typeof emailjs === 'undefined' || !emailjs.send) {
+            console.warn('emailjs not available; form submit intercepted but email not sent.');
+            alert('Unable to send message right now. Please try again later.');
+            return;
+        }
+
+        sendEmail(formName, formEmail, formMessage);
+        alert("Your message has been sent successfully!");
+        emailForm.reset();
+    });
+} else {
+    console.warn('Email form element not found.');
+}
